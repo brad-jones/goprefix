@@ -1,4 +1,4 @@
-module github.com/brad-jones/goprefx
+module github.com/brad-jones/goprefix
 
 go 1.13
 

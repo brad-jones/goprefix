@@ -4,8 +4,8 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/brad-jones/goprefx/pkg/colorchooser"
-	"github.com/brad-jones/goprefx/pkg/prefixer"
+	"github.com/brad-jones/goprefix/pkg/colorchooser"
+	"github.com/brad-jones/goprefix/pkg/prefixer"
 )
 
 func main() {
