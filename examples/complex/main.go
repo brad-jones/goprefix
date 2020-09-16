@@ -3,14 +3,15 @@ package main
 import (
 	"os"
 	"os/exec"
+	"runtime"
 
-	"github.com/brad-jones/goprefix/pkg/colorchooser"
-	"github.com/brad-jones/goprefix/pkg/prefixer"
+	"github.com/brad-jones/goprefix/v2/pkg/colorchooser"
+	"github.com/brad-jones/goprefix/v2/pkg/prefixer"
 )
 
 func main() {
-	p1 := prefixer.New(colorchooser.Sprint("ping 1.1.1.1") + " | ")
-	cmd1 := exec.Command("ping", "-c", "4", "1.1.1.1")
+	p1 := prefixer.New(colorchooser.Sprint("ip1") + " | ")
+	cmd1 := exec.Command("ping", pingArg(), "4", "127.0.0.1")
 	stdOutPipe1, err := cmd1.StdoutPipe()
 	if err != nil {
 		panic(err)
@@ -25,8 +26,8 @@ func main() {
 		panic(err)
 	}
 
-	p2 := prefixer.New(colorchooser.Sprint("ping 1.0.0.1") + " | ")
-	cmd2 := exec.Command("ping", "-c", "4", "1.0.0.1")
+	p2 := prefixer.New(colorchooser.Sprint("ip2") + " | ")
+	cmd2 := exec.Command("ping", pingArg(), "4", "127.0.0.2")
 	stdOutPipe2, err := cmd2.StdoutPipe()
 	if err != nil {
 		panic(err)
@@ -52,4 +53,11 @@ func main() {
 	if err := cmd2.Wait(); err != nil {
 		panic(err)
 	}
+}
+
+func pingArg() string {
+	if runtime.GOOS == "windows" {
+		return "-n"
+	}
+	return "-c"
 }

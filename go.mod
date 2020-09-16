@@ -1,10 +1,10 @@
-module github.com/brad-jones/goprefix
+module github.com/brad-jones/goprefix/v2
 
-go 1.13
+go 1.15
 
 require (
-	github.com/brad-jones/goerr v0.0.0-20191212045712-8f2b09c286c0
-	github.com/fatih/color v1.7.0
-	github.com/mattn/go-colorable v0.1.4 // indirect
-	github.com/mattn/go-isatty v0.0.11 // indirect
+	github.com/brad-jones/goerr/v2 v2.1.0
+	github.com/logrusorgru/aurora/v3 v3.0.0
+	github.com/stretchr/testify v1.6.1
+	github.com/wesovilabs/koazee v0.0.5
 )

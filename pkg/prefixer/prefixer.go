@@ -1,3 +1,4 @@
+// Package prefixer will read a stream and prefix each line with the given prefix.
 package prefixer
 
 import (
@@ -6,7 +7,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/brad-jones/goerr"
+	"github.com/brad-jones/goerr/v2"
 )
 
 type Prefixer struct {
