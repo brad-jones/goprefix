@@ -57,14 +57,14 @@ func (c *ColorChooser) Choose(prefix string) aurora.Color {
 		return v.(aurora.Color)
 	}
 
-	// Construct a list of avaliable colors
+	// Construct a list of available colors
 	availableColors := []aurora.Color{}
 	if c.chosenCount >= len(c.allColors) {
 		// We reached the maximum number of available colors so
 		// we will just have to reuse a color.
 		availableColors = c.allColors
 	} else {
-		// Restrict avaliable color to ones we have not used yet
+		// Restrict available color to ones we have not used yet
 		for _, v := range c.allColors {
 			if _, chosen := c.chosenColors.Load(v); !chosen {
 				availableColors = append(availableColors, v)
@@ -73,19 +73,19 @@ func (c *ColorChooser) Choose(prefix string) aurora.Color {
 	}
 
 	// Choose a new color
-	var choosen aurora.Color
+	var chosen aurora.Color
 	if len(availableColors) == 1 {
-		choosen = availableColors[0]
+		chosen = availableColors[0]
 	} else {
-		choosen = availableColors[c.randGen.Intn(len(availableColors))]
+		chosen = availableColors[c.randGen.Intn(len(availableColors))]
 	}
 
 	// Cache the result for next time
 	c.chosenCount = c.chosenCount + 1
-	c.chosenColors.Store(choosen, true)
-	c.prefixToColorMap.Store(prefix, choosen)
+	c.chosenColors.Store(chosen, true)
+	c.prefixToColorMap.Store(prefix, chosen)
 
-	return choosen
+	return chosen
 }
 
 func (c *ColorChooser) Sprint(prefix string) string {
