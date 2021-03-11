@@ -1,3 +1,10 @@
+## [2.0.5](https://github.com/brad-jones/goprefix/compare/v2.0.4...v2.0.5) (2021-03-11)
+
+
+### Reverts
+
+* Revert "chore: debug pipeline" ([d1908d3](https://github.com/brad-jones/goprefix/commit/d1908d362a7bf46b1ee855e69f2c521abbd324c8))
+
 ## [2.0.4](https://github.com/brad-jones/goprefix/compare/v2.0.3...v2.0.4) (2021-03-11)
 
 
