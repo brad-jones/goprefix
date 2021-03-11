@@ -1,3 +1,10 @@
+## [2.0.4](https://github.com/brad-jones/goprefix/compare/v2.0.3...v2.0.4) (2021-03-11)
+
+
+### Bug Fixes
+
+* bump node & go versions ([fcbfe92](https://github.com/brad-jones/goprefix/commit/fcbfe9249a234a534a62111d8f4428bdd72a4877))
+
 ## [2.0.3](https://github.com/brad-jones/goprefix/compare/v2.0.2...v2.0.3) (2021-03-11)
 
 
