@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/brad-jones/goprefix/compare/v2.0.1...v2.0.2) (2021-03-11)
+
+
+### Bug Fixes
+
+* **deps:** bump github.com/stretchr/testify from 1.6.1 to 1.7.0 ([#25](https://github.com/brad-jones/goprefix/issues/25)) ([42d8fc2](https://github.com/brad-jones/goprefix/commit/42d8fc2cfef976dbe93ced6849d6baa04d87fbb2))
+
 ## [2.0.1](https://github.com/brad-jones/goprefix/compare/v2.0.0...v2.0.1) (2020-09-18)
 
 
