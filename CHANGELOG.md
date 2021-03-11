@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/brad-jones/goprefix/compare/v2.0.2...v2.0.3) (2021-03-11)
+
+
+### Bug Fixes
+
+* **deps:** bump github.com/brad-jones/goerr/v2 from 2.1.1 to 2.1.3 ([#48](https://github.com/brad-jones/goprefix/issues/48)) ([8a113d7](https://github.com/brad-jones/goprefix/commit/8a113d7ff3478cd08b638590f653053caefeeac5))
+
 ## [2.0.2](https://github.com/brad-jones/goprefix/compare/v2.0.1...v2.0.2) (2021-03-11)
 
 
